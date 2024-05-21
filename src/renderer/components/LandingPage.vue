@@ -16,11 +16,11 @@
 </template>
 
 <script>
-import SystemInformation from './LandingPage/SystemInformation'
+// import SystemInformation from './LandingPage/SystemInformation'
 import LoginPage from '../pages/admin/login.vue'
 export default {
     name: 'landing-page',
-    components: { SystemInformation, LoginPage },
+    components: { LoginPage },
     methods: {
         open (link) {
             this.$electron.shell.openExternal(link)

@@ -20,10 +20,12 @@
 
 <script>
 export default {
-    data: {
-        username: '',
-        password: '',
-        errorMessage: ''
+    data () {
+        return {
+            username: 'admin',
+            password: '123',
+            errorMessage: ''
+        }
     },
     methods: {
         login () {
@@ -31,6 +33,7 @@ export default {
             if (this.username === 'admin' && this.password === '123') {
                 // 登录成功，跳转到其他页面或执行其他操作  
                 alert('Login successful!');
+                this.$router.push('/home');
                 // 清除错误信息（如果有的话）  
                 this.errorMessage = '';
             } else {
@@ -38,11 +41,11 @@ export default {
                 this.errorMessage = 'Incorrect username or password';
             }
         }
-    }
+    },
 }
 </script>
 
-<style>
+<style scoped>
 .login-page {
     font-family: Arial, sans-serif;
     /* background-color: #f0f0f0; */
